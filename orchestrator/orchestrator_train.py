@@ -1,11 +1,15 @@
-import pandas as pd
-from packages.mushrooms.ml_ops.data_import.data_import import import_data
 import sys
 import os
+sys.path.insert(1, os.getcwd())
+import pandas as pd
+from packages.mushrooms.ml_ops.data_import.data_import import run_import_data
+from packages.mushrooms.ml_ops.data_processing.data_processing import run_data_processing
+from packages.mushrooms.ml_ops.training.train import run_model_training
 
-# Force Python to recognize the project root (where 'packages' is)
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-print("Python path:")
-print("\n".join(sys.path))  # Just for debugging, can remove later
+df = run_import_data(path = 'data/mushroom_cleaned.csv', name = 'mushrooms')
+print(df.head())
 
-df = import_data(path = 'data\mushroom_cleaned.csv', name = 'mushrooms')
+df = run_data_processing(df)
+print(df)
+
+run_model_training(df, 0.3, 0.5)
