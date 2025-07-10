@@ -8,9 +8,8 @@ def prepare_dataset(df: pd.DataFrame, target_var: str, val_test_size: float, tes
     y = df[target_var]
 
     X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=val_test_size)
-    X_val, X_test, y_val, y_test = train_test_split(X_val, y_val, test_size=test_size)
 
-    return X_train, X_val, X_test, y_train, y_val, y_test
+    return X_train, X_val, y_train, y_val
 
 def train_model(X_train, y_train):
     model = DecisionTreeClassifier(criterion='entropy', splitter='best', max_depth = 30)
@@ -18,7 +17,7 @@ def train_model(X_train, y_train):
 
     return trained_model
 
-def validate_model(model, X_val, y_val):
+def evaluate_model(model, X_val, y_val):
     y_hat_val = model.predict(X_val)
     X_val['y_hat'] = y_hat_val
     X_val['y'] = y_val

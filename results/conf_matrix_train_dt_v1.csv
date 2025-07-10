@@ -1,0 +1,5 @@
+,y,y_hat,pct_results,model
+0,0,0,0.4410471753821928,DecisionTree_V1
+1,0,1,0.009054523981366053,DecisionTree_V1
+2,1,0,0.010432386326356539,DecisionTree_V1
+3,1,1,0.5394659143100846,DecisionTree_V1
