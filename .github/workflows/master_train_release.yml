@@ -1,0 +1,39 @@
+name: model-training
+
+on:
+  pull_request:
+    branches: master
+
+permissions: write-all
+
+jobs:
+  train_and_report_eval_performance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
+      # Setup CML GitHub Action
+      - name: Setup CML
+        uses: iterative/iterative/setup-cml@v1
+          
+      - name: Train model
+        run: |
+          python3 ../orchestrator/orchestrator_train.py
+
+      - name: Write CML report
+        env:
+          REPO_TOKEN: ${{ secrets.MUSHROOM_TREE_TOKEN }}
+        run: |
+          # Add metrics data to markdown
+          cat conf_matrix_train_dt_v2.json >> model_eval_report.md
+          cat feature_importance_dt_v2.json >> model_eval_report.md
+          # Add confusion matrix plot to markdown
+
+          # Create comment from markdown report
+          cml comment create model_eval_report.md
