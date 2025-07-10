@@ -66,13 +66,13 @@ jobs:
           # You might want to use 'jq' for better JSON formatting, or have your Python script
           # output the JSON as a formatted Markdown table/block directly.
           echo '```json' >> model_eval_report.md
-          cat conf_matrix_train_dt_v2.json >> model_eval_report.md
+          cat results/conf_matrix_train_dt_v2.json >> model_eval_report.md
           echo '```' >> model_eval_report.md
           echo "" >> model_eval_report.md
 
           echo "### Feature Importance" >> model_eval_report.md
           echo '```json' >> model_eval_report.md
-          cat feature_importance_dt_v2.json >> model_eval_report.md
+          cat results/feature_importance_dt_v2.json >> model_eval_report.md
           echo '```' >> model_eval_report.md
           echo "" >> model_eval_report.md
 
