@@ -24,5 +24,16 @@ def validate_model(model, X_val, y_val):
     X_val['y'] = y_val
     results_conf_mat = X_val.groupby(['y', 'y_hat']).agg(pct_results = ('stem_width', 'count')).reset_index()
     results_conf_mat['pct_results'] = results_conf_mat['pct_results']/len(X_val)
+    results_conf_mat['model'] = 'DecisionTree_V1'
+    results_conf_mat.to_json('results/conf_matrix_train_dt_v2.json')
     
     return results_conf_mat
+
+def get_model_feature_importance(model, X_val):
+    importances = model.feature_importances_
+    features = X_val.columns
+    importance_df = pd.DataFrame({'feature': features, 'importances': importances}, index = range(len(importances)))
+    importance_df['model_name'] = 'DecisionTree_V1'
+    importance_df.to_json('results/feature_importance_dt_v2.json')
+
+    return importance_df
