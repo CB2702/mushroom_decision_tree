@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Corey/personal_code/mushroom_decision_tree/mlruns/969846860009607132/59209f24ce0c4dd3a306634e861514ca/artifacts
+end_time: 1764537217040
+entry_point_name: ''
+experiment_id: '969846860009607132'
+lifecycle_stage: active
+run_id: 59209f24ce0c4dd3a306634e861514ca
+run_name: resilient-horse-487
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764537208320
+status: 3
+tags: []
+user_id: Corey
