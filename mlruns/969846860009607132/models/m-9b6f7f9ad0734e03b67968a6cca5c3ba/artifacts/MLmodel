@@ -1,0 +1,63 @@
+artifact_path: file:///C:/Users/Corey/personal_code/mushroom_decision_tree/mlruns/969846860009607132/models/m-9b6f7f9ad0734e03b67968a6cca5c3ba/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 3.6.0
+model_id: m-9b6f7f9ad0734e03b67968a6cca5c3ba
+model_size_bytes: 126043
+model_uuid: m-9b6f7f9ad0734e03b67968a6cca5c3ba
+prompts: null
+run_id: d53a14244ec649bfb0c2bec1d00b5e47
+signature:
+  inputs: '[{"type": "long", "name": "cap_diameter", "required": true}, {"type": "double",
+    "name": "stem_height", "required": true}, {"type": "long", "name": "stem_width",
+    "required": true}, {"type": "double", "name": "stem_volume", "required": true},
+    {"type": "double", "name": "cap_area", "required": true}, {"type": "double", "name":
+    "stem_ratio", "required": true}, {"type": "long", "name": "cap_shape_0", "required":
+    true}, {"type": "long", "name": "cap_shape_1", "required": true}, {"type": "long",
+    "name": "cap_shape_2", "required": true}, {"type": "long", "name": "cap_shape_3",
+    "required": true}, {"type": "long", "name": "cap_shape_4", "required": true},
+    {"type": "long", "name": "cap_shape_5", "required": true}, {"type": "long", "name":
+    "cap_shape_6", "required": true}, {"type": "long", "name": "gill_attachment_0",
+    "required": true}, {"type": "long", "name": "gill_attachment_1", "required": true},
+    {"type": "long", "name": "gill_attachment_2", "required": true}, {"type": "long",
+    "name": "gill_attachment_3", "required": true}, {"type": "long", "name": "gill_attachment_4",
+    "required": true}, {"type": "long", "name": "gill_attachment_5", "required": true},
+    {"type": "long", "name": "gill_attachment_6", "required": true}, {"type": "long",
+    "name": "gill_color_0", "required": true}, {"type": "long", "name": "gill_color_1",
+    "required": true}, {"type": "long", "name": "gill_color_2", "required": true},
+    {"type": "long", "name": "gill_color_3", "required": true}, {"type": "long", "name":
+    "gill_color_4", "required": true}, {"type": "long", "name": "gill_color_5", "required":
+    true}, {"type": "long", "name": "gill_color_6", "required": true}, {"type": "long",
+    "name": "gill_color_7", "required": true}, {"type": "long", "name": "gill_color_8",
+    "required": true}, {"type": "long", "name": "gill_color_9", "required": true},
+    {"type": "long", "name": "gill_color_10", "required": true}, {"type": "long",
+    "name": "gill_color_11", "required": true}, {"type": "long", "name": "stem_color_0",
+    "required": true}, {"type": "long", "name": "stem_color_1", "required": true},
+    {"type": "long", "name": "stem_color_2", "required": true}, {"type": "long", "name":
+    "stem_color_3", "required": true}, {"type": "long", "name": "stem_color_4", "required":
+    true}, {"type": "long", "name": "stem_color_5", "required": true}, {"type": "long",
+    "name": "stem_color_6", "required": true}, {"type": "long", "name": "stem_color_7",
+    "required": true}, {"type": "long", "name": "stem_color_8", "required": true},
+    {"type": "long", "name": "stem_color_9", "required": true}, {"type": "long", "name":
+    "stem_color_10", "required": true}, {"type": "long", "name": "stem_color_11",
+    "required": true}, {"type": "long", "name": "stem_color_12", "required": true},
+    {"type": "long", "name": "season_0.03", "required": true}, {"type": "long", "name":
+    "season_0.89", "required": true}, {"type": "long", "name": "season_0.94", "required":
+    true}, {"type": "long", "name": "season_1.8", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-11-30 19:18:55.418520'

@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/Corey/personal_code/mushroom_decision_tree/mlruns/969846860009607132/models/m-694f84119ff54eb0b54c99fac8e603f7/artifacts
+creation_timestamp: 1764537182828
+experiment_id: '969846860009607132'
+last_updated_timestamp: 1764537186217
+model_id: m-694f84119ff54eb0b54c99fac8e603f7
+model_type: null
+name: model
+source_run_id: 00b42a55be4f41e98cb4ea165422dea0
+status: 2
+status_message: null
